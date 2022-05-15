@@ -1,6 +1,6 @@
 import './App.css';
 import { Component } from 'react';
-import Form from './components/Form';
+import Form from './components/Form/Form';
 
 class App extends Component {
   constructor() {
