@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
+import './Grid.css';
 
 const Grid = ({ prompts, id }) => {
   const promptCards = prompts.map((prompt) => {
