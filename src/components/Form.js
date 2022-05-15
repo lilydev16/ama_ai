@@ -16,6 +16,11 @@ class Form extends Component {
     e.preventDefault()
     const newPrompt = { id: Date.now(), ...this.state }
     this.props.addPrompt(newPrompt)
+    this.clearInputs()
+  }
+
+  clearInputs = () => {
+    this.setState({ promptInput: '' })
   }
 
   render = () => {
