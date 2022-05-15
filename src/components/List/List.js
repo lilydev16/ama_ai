@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "../Card/Card";
-import './Grid.css';
+import './List.css';
 
-const Grid = ({ prompts, id }) => {
+const List = ({ prompts, id }) => {
   const promptCards = prompts.map((prompt) => {
     return(
       <Card
@@ -14,10 +14,10 @@ const Grid = ({ prompts, id }) => {
   })
 
   return(
-    <div className="grid">
+    <div className="list">
       {promptCards}
     </div>
   )
 }
 
-export default Grid;
+export default List;

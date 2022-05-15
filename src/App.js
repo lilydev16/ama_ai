@@ -1,7 +1,7 @@
 import './App.css';
 import { Component } from 'react';
 import Form from './components/Form/Form';
-import Grid from './components/Grid/Grid';
+import List from './components/List/List';
 import Header from './components/Header/Header';
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
       <div className="app">
         <Header />
         <Form addPrompt={this.addPrompt} />
-        <Grid prompts={this.state.prompts} />
+        <List prompts={this.state.prompts} />
       </div>
     )
 
