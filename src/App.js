@@ -5,13 +5,19 @@ import Form from './components/Form';
 class App extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      prompts: [] 
+    }
+  }
+
+  addPrompt = (newPrompt) => {
+    this.setState({ prompts: [...this.state.prompts, newPrompt] })
   }
 
   render = () => {
     return (
       <div className="App">
-        <Form />
+        <Form addPrompt={this.addPrompt} />
       </div>
     )
 
