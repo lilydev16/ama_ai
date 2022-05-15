@@ -11,6 +11,12 @@ class Form extends Component {
   updatePromptInput = (e) => {
     this.setState({ promptInput: e.target.value })
   }
+  
+  submitPrompt = (e) => {
+    e.preventDefault()
+    const newPrompt = { id: Date.now(), ...this.state }
+    this.props.addPrompt(newPrompt)
+  }
 
   render = () => {
     return(
@@ -25,7 +31,7 @@ class Form extends Component {
             value={this.state.promptInput}
             onChange={(e) => this.updatePromptInput(e)}
           />
-          <button>Enter</button>
+          <button onClick={(e) => this.submitPrompt(e)}>Enter</button>
         </form>
       </div>
     )
