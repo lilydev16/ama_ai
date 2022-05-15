@@ -1,6 +1,7 @@
 import './App.css';
 import { Component } from 'react';
 import Form from './components/Form/Form';
+import Grid from './components/Grid/Grid';
 
 class App extends Component {
   constructor() {
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <Form addPrompt={this.addPrompt} />
+        <Grid prompts={this.state.prompts} />
       </div>
     )
 
