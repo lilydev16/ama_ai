@@ -1,10 +1,13 @@
 import React from "react";
+import './Header.css'
 
 const Header = () => {
   return(
-    <header>
-      Fun With AI
-    </header>
+    <div className="header">
+      <header>
+        Fun With AI
+      </header>
+    </div>
   )
 }
 
