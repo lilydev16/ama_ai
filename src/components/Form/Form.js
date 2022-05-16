@@ -27,7 +27,7 @@ class Form extends Component {
   render = () => {
     return(
       <div className='form'>
-        <form>
+        <form onSubmit={this.submitPrompt}>
           <label htmlFor='prompt'>Prompt:</label>
           <input 
             type='text'
@@ -37,7 +37,7 @@ class Form extends Component {
             value={this.state.promptInput}
             onChange={(e) => this.updatePromptInput(e)}
           />
-          <button onClick={(e) => this.submitPrompt(e)}>Enter</button>
+          <button>Enter</button>
         </form>
       </div>
     )
