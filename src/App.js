@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Form from './components/Form/Form';
 import List from './components/List/List';
 import Header from './components/Header/Header';
+import apiCalls from './apiCalls';
 
 class App extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class App extends Component {
   }
 
   addPrompt = (newPrompt) => {
-    this.setState({ prompts: [...this.state.prompts, newPrompt] })
+    apiCalls.postPrompt(newPrompt.promptInput)
   }
 
   render = () => {
