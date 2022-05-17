@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      texts: []
+      texts: [],
+      error: ''
     }
   }
 
@@ -18,20 +19,23 @@ class App extends Component {
       .then(textData => {
         this.setState({ texts: [...this.state.texts, textData]})
       })
-      // .catch(err => {
-
-      // })
+      .catch(err => {
+        this.setState({ error: `Oops... Something went wrong. Our team is working on fixing the issue` })
+      })
   }
 
   render = () => {
     return (
       <div className="app">
-        <Header />
-        <Form addPrompt={this.addPrompt} />
-        <List texts={this.state.texts} />
+        {this.state.error ? <p className='error'>{this.state.error}</p> :
+        <>
+          <Header />
+          <Form addPrompt={this.addPrompt} />
+          <List texts={this.state.texts} />
+        </>
+        }
       </div>
     )
-
   }
 }
 
