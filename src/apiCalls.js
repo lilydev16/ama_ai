@@ -11,10 +11,7 @@ const apiCalls = {
       presence_penalty: 0.0,
       echo: true, 
       stream: false,
-      // n: 1
     }
-
-    console.log(JSON.stringify(data))
 
     return fetch(url, {
       method: "POST",
@@ -25,9 +22,9 @@ const apiCalls = {
       body: JSON.stringify(data)       
     })
     .then(res => res.json())
-    .then(data => {
-      console.log(data.choices[0].text)
-      return data.choices[0].text
+    .then(data => data.choices[0].text)
+    .catch(error => {
+      throw error
     })
   }
 }
