@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   addPrompt = (newPrompt) => {
-    apiCalls.postPrompt(newPrompt.promptInput)
+    apiCalls.postPrompt(newPrompt)
       .then(textData => {
         this.setState({ texts: [textData, ...this.state.texts]})
       })

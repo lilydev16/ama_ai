@@ -1,9 +1,15 @@
 const apiCalls = {
   postPrompt(newPrompt) {
-    const url = 'https://api.openai.com/v1/engines/text-curie-001/completions'
+    let engine
+    newPrompt.engine ? engine = newPrompt.engine
+      : engine = 'text-curie-001'
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY
+    let url = `https://api.openai.com/v1/engines/${engine}/completions`
+
+    console.log(url)
+ 
     const data = {
-      prompt: newPrompt,
+      prompt: newPrompt.promptInput,
       temperature: 0.5,
       max_tokens: 6,
       top_p: 1.0,
