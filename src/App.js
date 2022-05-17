@@ -17,7 +17,7 @@ class App extends Component {
   addPrompt = (newPrompt) => {
     apiCalls.postPrompt(newPrompt.promptInput)
       .then(textData => {
-        this.setState({ texts: [...this.state.texts, textData]})
+        this.setState({ texts: [textData, ...this.state.texts]})
       })
       .catch(err => {
         this.setState({ error: `Oops... Something went wrong. Our team is working on fixing the issue` })
