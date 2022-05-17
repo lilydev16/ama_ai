@@ -9,14 +9,14 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      prompts: []
+      texts: []
     }
   }
 
   addPrompt = (newPrompt) => {
     apiCalls.postPrompt(newPrompt.promptInput)
       .then(textData => {
-        this.setState({ prompts: [...this.state.prompts, textData]})
+        this.setState({ texts: [...this.state.texts, textData]})
       })
       // .catch(err => {
 
@@ -28,7 +28,7 @@ class App extends Component {
       <div className="app">
         <Header />
         <Form addPrompt={this.addPrompt} />
-        <List prompts={this.state.prompts} />
+        <List texts={this.state.texts} />
       </div>
     )
 

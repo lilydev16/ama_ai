@@ -2,13 +2,12 @@ import React from "react";
 import Card from "../Card/Card";
 import './List.css';
 
-const List = ({ prompts, id }) => {
-  const promptCards = prompts.map((prompt) => {
+const List = ({ texts}) => {
+  const promptCards = texts.map((text, index) => {
     return(
       <Card
-        key={prompt.id}
-        id={prompt.id}
-        prompt={prompt.promptInput}
+        key={index}
+        text={text}
       />
     )
   })
