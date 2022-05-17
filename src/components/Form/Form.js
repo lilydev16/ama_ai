@@ -5,7 +5,8 @@ class Form extends Component {
   constructor() {
     super()
     this.state = {
-      promptInput: ''
+      promptInput: '',
+      engine: ''
     }
   }
 
@@ -24,6 +25,11 @@ class Form extends Component {
     this.setState({ promptInput: '' })
   }
 
+  updateEngine = (e) => {
+    console.log(e.target.value)
+    this.setState({ engine: e.target.value })
+  }
+
   render = () => {
     return(
       <div className='form'>
@@ -37,6 +43,17 @@ class Form extends Component {
             value={this.state.promptInput}
             onChange={(e) => this.updatePromptInput(e)}
           />
+          <p>Choose an engine</p>
+          <select
+            name='engine'
+            value={this.state.engine}
+            onChange={(e) => this.updateEngine(e)}
+          >
+            <option value='text-curie-001'>curie</option>
+            <option value='text-davinci-002'>davinci</option>
+            <option value='text-babbage-001'>babbage</option>
+            <option value='text-ada-001'>ada</option>
+          </select>
           <button>Enter</button>
         </form>
       </div>
