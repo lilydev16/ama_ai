@@ -9,12 +9,18 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      prompts: [] 
+      prompts: []
     }
   }
 
   addPrompt = (newPrompt) => {
     apiCalls.postPrompt(newPrompt.promptInput)
+      .then(textData => {
+        this.setState({ prompts: [...this.state.prompts, textData]})
+      })
+      // .catch(err => {
+
+      // })
   }
 
   render = () => {
