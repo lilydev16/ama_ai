@@ -2,20 +2,17 @@ import { useState, useEffect } from 'react';
 import './Form.css'
 
 const Form = ({ addPrompt }) => {
-  const [prompt, setPrompt] = useState('')
-  const [engine, setEngine] = useState('')
-  const [temperature, setTemperature] = useState(0.5)
-  const [tokens, setTokens] = useState(6)
+  const [promptReq, setPromptReq] = useState({
+    prompt: '',
+    engine: '',
+    temperature: 0.5,
+    tokens: 6
+  })
 
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     promptInput: '',
-  //     engine: '',
-  //     temperature: 0.5,
-  //     tokens: 6
-  //   }
-  // }
+  // const [prompt, setPrompt] = useState('')
+  // const [engine, setEngine] = useState('')
+  // const [temperature, setTemperature] = useState(0.5)
+  // const [tokens, setTokens] = useState(6)
 
   const updatePromptInput = (e) => {
     setPrompt(e.target.value)
