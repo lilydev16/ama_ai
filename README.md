@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Fun with AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Have you ever used the [OpenAI](https://beta.openai.com/overview) API? If not here's your chance to play around with AI technology in this React application. Try asking the AI a question and see what response you get back. After inputing text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. For example, if you give the API the prompt, “Write a tagline for an ice cream shop”, it will return a completion like “We serve up smiles with every scoop!” Read more about the AI in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
-In the project directory, you can run:
+Try changing the settings to see if the AI will generate different responses.
 
-### `npm start`
+[Add Deploy link here]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Learning Goals
+- React fundamentals
+- React Hooks
+- Local storage
+- APIs
+- Asychronus JavaScript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Getting Started
+To get a local copy up and running follow these simple steps.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. In your terminal, clone the repo
+   ```sh
+   git clone git@github.com:lswatson16/fun_with_ai.git
+   ```
+2. cd into the root directory
+    ```sh
+   cd fun_with_ai
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the server to see the application in the browser
+   ```sh
+   npm start
+   ``` 
+   - Runs the app in the development mode.
+   - Open http://localhost:3000 to view it in the browser.
+   - The page will reload if you make edits.
 
-### `npm run build`
+# Challenges and Wins
+Implementing React hooks and local storage was a huge win for me. It was important that I get the application working first with a few features (eg. adding presets and ability to change the engine, temperature, and max tokens). Then I chose to challenge myself by converting to React hooks and implementing local storage.
+On the feature branch `feature/local-storage`,  I converted the class components to functional components and implemented `useState` and `useEffect` to get more practice using hooks. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This was the first time I implemented local storage. I found this article, [Local Storage in React](https://www.robinwieruch.de/local-storage-react/) helpful. After implementing local storage to the form, I realized I needed to add an additonal button to reset the form.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here's some other helpful articles:
+- [Using React useState with an object](https://blog.logrocket.com/using-react-usestate-object/)
+- [Returning Object Literals from Arrow Functions in JavaScript](https://mariusschulz.com/blog/returning-object-literals-from-arrow-functions-in-javascript)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Features
 
-### `npm run eject`
+The user can enter a prompt to ask the AI a question like "What's today's date?". When the AI responds, the messages between the user and AI are displayed in a list from newest to oldest. The messages and input values persist on the page even when the page reloads due to local storage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The form allows the user to play around with the settings for the engine, temperature, and max tokens. 
+If a user doesn't want to change the settings, then the default engine is `Curie` and the request body will send these presets to the API:
+- temperature: 0.5
+- max tokens: 6
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Future Additions
+- Favoriting messages between the user and AI
+- Example prompts that the user can easily copy and paste into the form to get started using the application.
+- Narrowing down an audience/niche and specific topics to ask the AI
+- Styling:
+    - Adding css animation to the AI response text
+    - Clean design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Technologies Used
+- React
+- Javascript
+- HTML
+- CSS
+- Lighthouse (Chrome Dev Tools)
+- React Dev Tools (Chrome Dev Tools)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Deployment
+Skip installation by using this deployment link to view the application: [Add Deploy Link here]
+- The application was deployed using [Heroku](https://www.heroku.com/).
 
-## Learn More
+# Contributors
+- [Lauralyn Watson](https://github.com/lswatson16)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Credits
+- [OpenAI](https://beta.openai.com/overview)
+- [Create React App](https://create-react-app.dev/)
+- [Favicon generator](https://favicon.io/favicon-generator/)
+- [Heroku](https://www.heroku.com/)
