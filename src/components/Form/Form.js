@@ -39,16 +39,13 @@ const Form = ({ addPrompt }) => {
 
   const submitPrompt = (e) => {
     e.preventDefault()
-    const newPrompt = { id: Date.now(), ...promptReq}
-    console.log('new>>>>>>', newPrompt)
-    addPrompt(newPrompt)
+    addPrompt(promptReq)
     clearInputs()
   }
 
   const clearInputs = () => {
     setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: '' })
   }
-
 
   return(
     <div className='form'>
@@ -63,7 +60,7 @@ const Form = ({ addPrompt }) => {
           value={promptReq.prompt}
           onChange={(e) => updatePromptInput(e)}
         />
-        
+
         <select
           name='engine'
           value={promptReq.engine}
