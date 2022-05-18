@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react';
 import './Form.css'
 
 const Form = ({ addPrompt }) => {
-  const [promptReq, setPromptReq] = useState({
-    prompt: '',
-    engine: '',
-    temperature: 0.5,
-    tokens: 6
-  })
+  const [promptReq, setPromptReq] = useState(
+    JSON.parse(localStorage.getItem('prompt-req')) ||
+    {
+      prompt: '',
+      engine: '',
+      temperature: 0.5,
+      tokens: 6
+    }
+  )
 
   const updatePromptInput = (e) => {
     setPromptReq(promptReq => ({
@@ -46,6 +49,11 @@ const Form = ({ addPrompt }) => {
   const clearInputs = () => {
     setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: '' })
   }
+
+
+  useEffect(() => {
+    localStorage.setItem('prompt-req', JSON.stringify(promptReq))
+  }, [promptReq])
 
   return(
     <div className='form'>
@@ -97,6 +105,7 @@ const Form = ({ addPrompt }) => {
         />
         <button>Enter</button>
       </form>
+      
     </div>
   )
 }
