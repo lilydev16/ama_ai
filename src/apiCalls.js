@@ -1,11 +1,7 @@
 const apiCalls = {
   postPrompt(newPrompt) {
     let engine
-    newPrompt.engine ? engine = newPrompt.engine
-      : engine = 'text-curie-001'
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY
-    let url = `https://api.openai.com/v1/engines/${engine}/completions`
- 
     const data = {
       prompt: newPrompt.promptInput,
       temperature: newPrompt.temperature,
@@ -16,8 +12,11 @@ const apiCalls = {
       echo: true, 
       stream: false,
     }
+    
+    newPrompt.engine ? engine = newPrompt.engine
+      : engine = 'text-curie-001'
 
-    return fetch(url, {
+    return fetch(`https://api.openai.com/v1/engines/${engine}/completions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
