@@ -105,7 +105,7 @@ const Form = ({ addPrompt }) => {
         />
         <button>Enter</button>
       </form>
-      
+      <button onClick={() => clearInputs()}>Reset</button>
     </div>
   )
 }
