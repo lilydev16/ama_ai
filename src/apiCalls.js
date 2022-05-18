@@ -10,7 +10,7 @@ const apiCalls = {
  
     const data = {
       prompt: newPrompt.promptInput,
-      temperature: 0.5,
+      temperature: newPrompt.temperature,
       max_tokens: 6,
       top_p: 1.0,
       frequency_penalty: 0.0,
