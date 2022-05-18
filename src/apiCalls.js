@@ -5,8 +5,6 @@ const apiCalls = {
       : engine = 'text-curie-001'
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY
     let url = `https://api.openai.com/v1/engines/${engine}/completions`
-
-    console.log(url)
  
     const data = {
       prompt: newPrompt.promptInput,

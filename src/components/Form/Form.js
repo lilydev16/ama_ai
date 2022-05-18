@@ -34,7 +34,6 @@ class Form extends Component {
   updateTemperature = (e) => {
     let { value, min, max } = e.target;
     value = Math.max(Number(min), Math.min(Number(max), Number(value)))
-    console.log(value)
     this.setState({ temperature: value })
   }
 
