@@ -6,8 +6,9 @@ import Header from './components/Header/Header';
 import apiCalls from './apiCalls';
 
 const App = () => {
-  const [texts, setTexts] = useState([])
   const [error, setError] = useState('')
+  const [texts, setTexts] = useState(
+    JSON.parse(localStorage.getItem('texts')) || [])
 
   const addPrompt = (newPrompt) => {
     apiCalls.postPrompt(newPrompt)
@@ -18,6 +19,10 @@ const App = () => {
         setError(`Oops... Something went wrong. Our team is working on fixing the issue`)
       })
   }
+
+  useEffect(() => {
+    localStorage.setItem('texts', JSON.stringify(texts))
+  }, [texts])
 
   return (
     <div className="app">
