@@ -7,7 +7,8 @@ class Form extends Component {
     this.state = {
       promptInput: '',
       engine: '',
-      temperature: ''
+      temperature: '',
+      tokens: 6
     }
   }
 
@@ -23,7 +24,7 @@ class Form extends Component {
   }
 
   clearInputs = () => {
-    this.setState({ promptInput: '', temperature: '' })
+    this.setState({ promptInput: '', temperature: '', tokens: '' })
   }
 
   updateEngine = (e) => {
@@ -35,6 +36,12 @@ class Form extends Component {
     let { value, min, max } = e.target;
     value = Math.max(Number(min), Math.min(Number(max), Number(value)))
     this.setState({ temperature: value })
+  }
+
+  updateTokens = (e) => {
+    let { value: tokenValue, min, max } = e.target
+    tokenValue = Math.max(Number(min), Math.min(Number(max), Number(tokenValue)))
+    this.setState({ tokens: tokenValue })
   }
 
   render = () => {
@@ -73,6 +80,17 @@ class Form extends Component {
             placeholder='0.4'
             value={this.state.temperature}
             onChange={(e) => this.updateTemperature(e)}
+          />
+          <p>Choose max tokens</p>
+          <input
+            className='tokens-input'
+            type='number'
+            max='140'
+            min='1'
+            name='tokens'
+            placeholder='64'
+            value={this.state.tokens}
+            onChange={(e) => this.updateTokens(e)}
           />
           <button>Enter</button>
         </form>
