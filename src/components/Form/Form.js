@@ -7,7 +7,7 @@ class Form extends Component {
     this.state = {
       promptInput: '',
       engine: '',
-      temperature: '',
+      temperature: 0.5,
       tokens: 6
     }
   }
@@ -28,7 +28,6 @@ class Form extends Component {
   }
 
   updateEngine = (e) => {
-    console.log(e.target.value)
     this.setState({ engine: e.target.value })
   }
 

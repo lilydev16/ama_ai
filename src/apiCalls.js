@@ -1,13 +1,12 @@
 const apiCalls = {
   postPrompt(newPrompt) {
-    let engine, temp
+    let engine
     newPrompt.engine ? engine = newPrompt.engine : engine = 'text-curie-001'
-    newPrompt.temperature ? temp = newPrompt.temperature : temp = 0.5
     
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY
     const data = {
       prompt: newPrompt.promptInput,
-      temperature: temp,
+      temperature: newPrompt.temperature,
       max_tokens: newPrompt.tokens,
       top_p: 1.0,
       frequency_penalty: 0.0,
