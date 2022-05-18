@@ -50,7 +50,6 @@ const Form = ({ addPrompt }) => {
     setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: '' })
   }
 
-
   useEffect(() => {
     localStorage.setItem('prompt-req', JSON.stringify(promptReq))
   }, [promptReq])
