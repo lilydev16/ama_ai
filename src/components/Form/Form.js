@@ -6,7 +6,8 @@ class Form extends Component {
     super()
     this.state = {
       promptInput: '',
-      engine: ''
+      engine: '',
+      temperature: ''
     }
   }
 
@@ -30,12 +31,20 @@ class Form extends Component {
     this.setState({ engine: e.target.value })
   }
 
+  updateTemperature = (e) => {
+    let { value, min, max } = e.target;
+    value = Math.max(Number(min), Math.min(Number(max), Number(value)))
+    console.log(value)
+    this.setState({ temperature: value })
+  }
+
   render = () => {
     return(
       <div className='form'>
         <form onSubmit={this.submitPrompt}>
           <label htmlFor='prompt'>Prompt:</label>
-          <input 
+          <input
+            className='prompt-input'
             type='text'
             id='prompt'
             name='prompt'
@@ -54,6 +63,18 @@ class Form extends Component {
             <option value='text-babbage-001'>babbage</option>
             <option value='text-ada-001'>ada</option>
           </select>
+          <p>Choose a temperature</p>
+          <input
+            className='temperature-input'
+            type='number'
+            max='1'
+            min='0'
+            step="0.01"
+            name='temperature'
+            placeholder='0.4'
+            value={this.state.temperature}
+            onChange={(e) => this.updateTemperature(e)}
+          />
           <button>Enter</button>
         </form>
       </div>
