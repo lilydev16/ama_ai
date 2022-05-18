@@ -23,7 +23,7 @@ class Form extends Component {
   }
 
   clearInputs = () => {
-    this.setState({ promptInput: '' })
+    this.setState({ promptInput: '', temperature: '' })
   }
 
   updateEngine = (e) => {
