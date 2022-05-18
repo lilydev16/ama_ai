@@ -46,7 +46,7 @@ const Form = ({ addPrompt }) => {
   }
 
   const clearInputs = () => {
-    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6 })
+    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: '' })
   }
 
 
@@ -63,12 +63,13 @@ const Form = ({ addPrompt }) => {
           value={promptReq.prompt}
           onChange={(e) => updatePromptInput(e)}
         />
-        <p>Choose an engine</p>
+        
         <select
           name='engine'
           value={promptReq.engine}
           onChange={(e) => updateEngine(e)}
         >
+          <option value=''>Choose an engine</option>
           <option value='text-curie-001'>curie</option>
           <option value='text-davinci-002'>davinci</option>
           <option value='text-babbage-001'>babbage</option>
