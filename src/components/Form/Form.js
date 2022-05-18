@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import './Form.css'
 
-const Form = () => {
+const Form = ({ addPrompt }) => {
   const [prompt, setPrompt] = useState('')
   const [engine, setEngine] = useState('')
   const [temperature, setTemperature] = useState(0.5)
   const [tokens, setTokens] = useState(6)
+
   // constructor() {
   //   super()
   //   this.state = {
@@ -17,39 +18,50 @@ const Form = () => {
   // }
 
   const updatePromptInput = (e) => {
-    this.setState({ promptInput: e.target.value })
+    setPrompt(e.target.value)
+    // this.setState({ promptInput: e.target.value })
   }
   
   const submitPrompt = (e) => {
     e.preventDefault()
-    const newPrompt = { id: Date.now(), ...this.state }
-    this.props.addPrompt(newPrompt)
-    this.clearInputs()
+    // const newPrompt = { id: Date.now(), ...this.state }
+    // this.props.addPrompt(newPrompt)
+    // this.clearInputs()
+    const newPrompt = { id: Date.now() }
+    console.log('new>>>>>>', newPrompt)
+    addPrompt(newPrompt)
+    clearInputs()
   }
 
   const clearInputs = () => {
-    this.setState({ promptInput: '', temperature: 0.5, tokens: 6 })
+    // this.setState({ promptInput: '', temperature: 0.5, tokens: 6 })
+    setPrompt('')
+    setTemperature(0.5)
+    setTokens(6)
   }
 
   const updateEngine = (e) => {
-    this.setState({ engine: e.target.value })
+    // this.setState({ engine: e.target.value })
+    setEngine(e.target.value)
   }
 
   const updateTemperature = (e) => {
     let { value, min, max } = e.target;
     value = Math.max(Number(min), Math.min(Number(max), Number(value)))
-    this.setState({ temperature: value })
+    // this.setState({ temperature: value })
+    setTemperature(value)
   }
 
   const updateTokens = (e) => {
     let { value: tokenValue, min, max } = e.target
     tokenValue = Math.max(Number(min), Math.min(Number(max), Number(tokenValue)))
-    this.setState({ tokens: tokenValue })
+    // this.setState({ tokens: tokenValue })
+    setTokens(tokenValue)
   }
 
   return(
     <div className='form'>
-      <form onSubmit={this.submitPrompt}>
+      <form onSubmit={submitPrompt}>
         <label htmlFor='prompt'>Prompt:</label>
         <input
           className='prompt-input'
@@ -57,14 +69,14 @@ const Form = () => {
           id='prompt'
           name='prompt'
           placeholder='Prompt'
-          value={this.state.promptInput}
-          onChange={(e) => this.updatePromptInput(e)}
+          value={prompt}
+          onChange={(e) => updatePromptInput(e)}
         />
         <p>Choose an engine</p>
         <select
           name='engine'
-          value={this.state.engine}
-          onChange={(e) => this.updateEngine(e)}
+          value={engine}
+          onChange={(e) => updateEngine(e)}
         >
           <option value='text-curie-001'>curie</option>
           <option value='text-davinci-002'>davinci</option>
@@ -80,8 +92,8 @@ const Form = () => {
           step="0.01"
           name='temperature'
           placeholder='0.4'
-          value={this.state.temperature}
-          onChange={(e) => this.updateTemperature(e)}
+          value={temperature}
+          onChange={(e) => updateTemperature(e)}
         />
         <p>Choose max tokens</p>
         <input
@@ -91,8 +103,8 @@ const Form = () => {
           min='1'
           name='tokens'
           placeholder='64'
-          value={this.state.tokens}
-          onChange={(e) => this.updateTokens(e)}
+          value={tokens}
+          onChange={(e) => updateTokens(e)}
         />
         <button>Enter</button>
       </form>
