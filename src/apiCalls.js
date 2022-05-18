@@ -5,7 +5,7 @@ const apiCalls = {
     
     const apiKey = process.env.REACT_APP_OPENAI_API_KEY
     const data = {
-      prompt: newPrompt.promptInput,
+      prompt: newPrompt.prompt,
       temperature: newPrompt.temperature,
       max_tokens: newPrompt.tokens,
       top_p: 1.0,

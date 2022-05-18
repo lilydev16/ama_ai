@@ -9,52 +9,46 @@ const Form = ({ addPrompt }) => {
     tokens: 6
   })
 
-  // const [prompt, setPrompt] = useState('')
-  // const [engine, setEngine] = useState('')
-  // const [temperature, setTemperature] = useState(0.5)
-  // const [tokens, setTokens] = useState(6)
-
   const updatePromptInput = (e) => {
-    setPrompt(e.target.value)
-    // this.setState({ promptInput: e.target.value })
+    setPromptReq(promptReq => ({
+      ...promptReq, prompt: e.target.value
+    }))
   }
   
+  const updateEngine = (e) => {
+    setPromptReq(promptReq => ({
+      ...promptReq, engine: e.target.value
+    }))
+  }
+
+  const updateTemperature = (e) => {
+    let { value, min, max } = e.target;
+    value = Math.max(Number(min), Math.min(Number(max), Number(value)))
+    setPromptReq(promptReq => ({
+      ...promptReq, temperature: value
+    }))
+  }
+
+  const updateTokens = (e) => {
+    let { value: tokenValue, min, max } = e.target
+    tokenValue = Math.max(Number(min), Math.min(Number(max), Number(tokenValue)))
+    setPromptReq(promptReq => ({
+      ...promptReq, tokens: tokenValue
+    }))
+  }
+
   const submitPrompt = (e) => {
     e.preventDefault()
-    // const newPrompt = { id: Date.now(), ...this.state }
-    // this.props.addPrompt(newPrompt)
-    // this.clearInputs()
-    const newPrompt = { id: Date.now() }
+    const newPrompt = { id: Date.now(), ...promptReq}
     console.log('new>>>>>>', newPrompt)
     addPrompt(newPrompt)
     clearInputs()
   }
 
   const clearInputs = () => {
-    // this.setState({ promptInput: '', temperature: 0.5, tokens: 6 })
-    setPrompt('')
-    setTemperature(0.5)
-    setTokens(6)
+    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6 })
   }
 
-  const updateEngine = (e) => {
-    // this.setState({ engine: e.target.value })
-    setEngine(e.target.value)
-  }
-
-  const updateTemperature = (e) => {
-    let { value, min, max } = e.target;
-    value = Math.max(Number(min), Math.min(Number(max), Number(value)))
-    // this.setState({ temperature: value })
-    setTemperature(value)
-  }
-
-  const updateTokens = (e) => {
-    let { value: tokenValue, min, max } = e.target
-    tokenValue = Math.max(Number(min), Math.min(Number(max), Number(tokenValue)))
-    // this.setState({ tokens: tokenValue })
-    setTokens(tokenValue)
-  }
 
   return(
     <div className='form'>
@@ -66,13 +60,13 @@ const Form = ({ addPrompt }) => {
           id='prompt'
           name='prompt'
           placeholder='Prompt'
-          value={prompt}
+          value={promptReq.prompt}
           onChange={(e) => updatePromptInput(e)}
         />
         <p>Choose an engine</p>
         <select
           name='engine'
-          value={engine}
+          value={promptReq.engine}
           onChange={(e) => updateEngine(e)}
         >
           <option value='text-curie-001'>curie</option>
@@ -89,7 +83,7 @@ const Form = ({ addPrompt }) => {
           step="0.01"
           name='temperature'
           placeholder='0.4'
-          value={temperature}
+          value={promptReq.temperature}
           onChange={(e) => updateTemperature(e)}
         />
         <p>Choose max tokens</p>
@@ -100,7 +94,7 @@ const Form = ({ addPrompt }) => {
           min='1'
           name='tokens'
           placeholder='64'
-          value={tokens}
+          value={promptReq.tokens}
           onChange={(e) => updateTokens(e)}
         />
         <button>Enter</button>
