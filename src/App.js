@@ -4,6 +4,7 @@ import Form from './components/Form/Form';
 import List from './components/List/List';
 import Header from './components/Header/Header';
 import apiCalls from './apiCalls';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [error, setError] = useState('')
@@ -31,6 +32,7 @@ const App = () => {
         <Header />
         <Form addPrompt={addPrompt} />
         <List texts={texts} />
+        <Footer />
       </>
       }
     </div>
