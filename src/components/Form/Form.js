@@ -73,7 +73,7 @@ const Form = ({ addPrompt }) => {
               onChange={(e) => updatePromptInput(e)}
               />
           </div>
-          <p className='mt-2 text-sm text-gray-500' id='prompt'>
+          <p className='mt-2 text-sm text-gray-500' id='prompt-text'>
             Ask a question.
           </p>
         </div>
@@ -141,7 +141,7 @@ const Form = ({ addPrompt }) => {
           </button>
           <button 
             type='button'
-            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-200 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
             onClick={() => clearInputs()}
           >
             Reset
