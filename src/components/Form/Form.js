@@ -97,9 +97,11 @@ const Form = ({ addPrompt }) => {
               <option value='text-ada-001'>ada</option>
             </select>
           </div>
-        
+
           <div className="flex justify-between">
-            <label className='block text-sm font-medium text-gray-700'>Temperature</label>
+            <label className='block text-sm font-medium text-gray-700'>
+              Temperature
+            </label>
             <span className="text-sm text-gray-500" id="temperature">Optional</span>
           </div>
           <div className='mt-1'>
@@ -113,10 +115,12 @@ const Form = ({ addPrompt }) => {
               placeholder='0.4'
               value={promptReq.temperature}
               onChange={(e) => updateTemperature(e)}
-              />
+            />
           </div>
           <div className="flex justify-between">
-            <label className='block text-sm font-medium text-gray-700'>Max Tokens</label>
+            <label className='block text-sm font-medium text-gray-700'>
+              Max Tokens
+            </label>
             <span className="text-sm text-gray-500" id="tokens">Optional</span>
           </div>
           <div className='mt-1'>
@@ -129,9 +133,10 @@ const Form = ({ addPrompt }) => {
               placeholder='64'
               value={promptReq.tokens}
               onChange={(e) => updateTokens(e)}
-              />
+            />  
           </div>
         </div>
+
         <div className='button-container'>
           <button 
             type='submit'
