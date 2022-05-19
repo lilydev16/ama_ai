@@ -57,11 +57,11 @@ const Form = ({ addPrompt }) => {
   return(
     <div className='form'>
       <form onSubmit={submitPrompt}>
-        <div>
-          <label htmlFor='prompt' className="block text-sm font-medium text-gray-700">
+        <div className='prompt-container'>
+          <label htmlFor='prompt' className='block text-sm font-medium text-gray-700'>
             Prompt
           </label>    
-          <div className="mt-1">
+          <div className='mt-1'>
             <input
               className='prompt-input shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
               aria-describedby="prompt"
@@ -73,15 +73,14 @@ const Form = ({ addPrompt }) => {
               onChange={(e) => updatePromptInput(e)}
               />
           </div>
-          <p className="mt-2 text-sm text-gray-500" id="prompt">
+          <p className='mt-2 text-sm text-gray-500' id='prompt'>
             Ask a question.
           </p>
         </div>
 
-
         <div className='settings'>
           <div>
-            <label htmlFor="engine" className="block text-sm font-medium text-gray-700">
+            <label htmlFor='engine' className='block text-sm font-medium text-gray-700'>
               Engine
             </label>
             <select
@@ -100,10 +99,10 @@ const Form = ({ addPrompt }) => {
           </div>
         
           <div className="flex justify-between">
-            <p className="block text-sm font-medium text-gray-700">Choose a temperature</p>
+            <label className='block text-sm font-medium text-gray-700'>Temperature</label>
             <span className="text-sm text-gray-500" id="temperature">Optional</span>
           </div>
-          <div className="mt-1">
+          <div className='mt-1'>
             <input
               className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
               type='number'
@@ -117,10 +116,10 @@ const Form = ({ addPrompt }) => {
               />
           </div>
           <div className="flex justify-between">
-            <p className="block text-sm font-medium text-gray-700">Choose max tokens</p>
+            <label className='block text-sm font-medium text-gray-700'>Max Tokens</label>
             <span className="text-sm text-gray-500" id="tokens">Optional</span>
           </div>
-          <div className="mt-1">
+          <div className='mt-1'>
             <input
               className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
               type='number'
@@ -134,8 +133,19 @@ const Form = ({ addPrompt }) => {
           </div>
         </div>
         <div className='button-container'>
-          <button type='submit'>Enter</button>
-          <button type='button' onClick={() => clearInputs()}>Reset</button>
+          <button 
+            type='submit'
+            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+          >
+            Enter
+          </button>
+          <button 
+            type='button'
+            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+            onClick={() => clearInputs()}
+          >
+            Reset
+          </button>
         </div>
       </form>
     </div>
