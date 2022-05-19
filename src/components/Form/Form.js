@@ -81,8 +81,8 @@ const Form = ({ addPrompt }) => {
           </p>
         </div>
 
-        <div className='settings'>
-          <div>
+        <div className='settings w-1/6'>
+          <div className='engine-container'>
             <label htmlFor='engine' className='block text-sm font-medium text-gray-700'>
               Engine
             </label>
@@ -101,44 +101,51 @@ const Form = ({ addPrompt }) => {
             </select>
           </div>
 
-          <div className="flex justify-between">
-            <label className='block text-sm font-medium text-gray-700'>
-              Temperature
-            </label>
-            <span className="text-sm text-gray-500" id="temperature">Optional</span>
-          </div>
-          <div className='mt-1'>
-            <input
-              className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
-              type='number'
-              max='1'
-              min='0'
-              step="0.01"
-              name='temperature'
-              placeholder='0.4'
-              value={promptReq.temperature}
-              onChange={(e) => updateTemperature(e)}
-            />
-          </div>
-          <div className="flex justify-between">
-            <label className='block text-sm font-medium text-gray-700'>
-              Max Tokens
-            </label>
-            <span className="text-sm text-gray-500" id="tokens">Optional</span>
-          </div>
-          <div className='mt-1'>
-            <input
-              className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
-              type='number'
-              max='140'
-              min='1'
-              name='tokens'
-              placeholder='64'
-              value={promptReq.tokens}
-              onChange={(e) => updateTokens(e)}
-            />  
-          </div>
-        
+
+          <div className='presets'>
+            <div className='temperature-container'>
+              <div className='flex justify-between'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Temperature
+                </label>
+                <span className='text-sm text-gray-500' id='temperature'>Optional</span>
+              </div>
+              <div className='mt-1'>
+                <input
+                  className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
+                  type='number'
+                  max='1'
+                  min='0'
+                  step="0.01"
+                  name='temperature'
+                  placeholder='0.4'
+                  value={promptReq.temperature}
+                  onChange={(e) => updateTemperature(e)}
+                />
+              </div>
+            </div>
+            <div className='token-container'>
+              <div className='flex justify-between'>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Max Tokens
+                </label>
+                <span className='text-sm text-gray-500' id='tokens'>Optional</span>
+              </div>
+              <div className='mt-1'>
+                <input
+                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
+                  type='number'
+                  max='140'
+                  min='1'
+                  name='tokens'
+                  placeholder='64'
+                  value={promptReq.tokens}
+                  onChange={(e) => updateTokens(e)}
+                />  
+              </div>
+
+            </div>
+          </div>    
         </div>
 
         <div className='button-container'>
