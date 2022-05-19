@@ -43,7 +43,6 @@ const Form = ({ addPrompt }) => {
 
   const submitPrompt = (e) => {
     e.preventDefault()
-    // if prompt is empty then dont add prompt, instead show an err msg to the user
     if (promptReq.prompt.trim().length !==0) {
       addPrompt(promptReq)
       clearInputs()
@@ -82,7 +81,6 @@ const Form = ({ addPrompt }) => {
               value={promptReq.prompt}
               onChange={(e) => updatePromptInput(e)}
             />
-
           </div>
           <p className='mt-2 text-sm text-gray-500' id='prompt-text'>
             Ask a question.
@@ -108,7 +106,6 @@ const Form = ({ addPrompt }) => {
               <option value='text-ada-001'>ada</option>
             </select>
           </div>
-
 
           <div className='presets'>
             <div className='temperature-container'>
