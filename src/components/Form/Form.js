@@ -68,11 +68,11 @@ const Form = ({ addPrompt }) => {
       >
         <div className='prompt-container'>
           <label htmlFor='prompt' className='block text-sm font-medium text-gray-700'>
-            Prompt
+            Ask me a question
           </label>    
-          <div className='mt-1'>
+          <div className='mt-1 rounded-md shadow-sm'>
             <input
-              className='prompt-input shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
+              className='prompt-input block w-full pr-10 border-indigo-300 text-indigo-900 placeholder-indigo-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md'
               aria-describedby='prompt'
               type='text'
               id='prompt'
@@ -82,10 +82,8 @@ const Form = ({ addPrompt }) => {
               onChange={(e) => updatePromptInput(e)}
             />
           </div>
-          <p className='mt-2 text-sm text-gray-500' id='prompt-text'>
-            Ask a question.
-          </p>
-          {isEmpty && <p>Please fill in the prompt</p>}
+          
+          {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
         </div>
 
         <div className='settings w-1/6'>
