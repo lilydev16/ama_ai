@@ -56,7 +56,10 @@ const Form = ({ addPrompt }) => {
 
   return(
     <div className='form'>
-      <form onSubmit={submitPrompt}>
+      <form 
+        onSubmit={submitPrompt} 
+        className='shadow-xl p-5 rounded-md'
+      >
         <div className='prompt-container'>
           <label htmlFor='prompt' className='block text-sm font-medium text-gray-700'>
             Prompt
@@ -64,7 +67,7 @@ const Form = ({ addPrompt }) => {
           <div className='mt-1'>
             <input
               className='prompt-input shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
-              aria-describedby="prompt"
+              aria-describedby='prompt'
               type='text'
               id='prompt'
               name='prompt'
@@ -135,6 +138,7 @@ const Form = ({ addPrompt }) => {
               onChange={(e) => updateTokens(e)}
             />  
           </div>
+        
         </div>
 
         <div className='button-container'>
@@ -146,7 +150,7 @@ const Form = ({ addPrompt }) => {
           </button>
           <button 
             type='button'
-            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-200 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+            className='inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-200 hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
             onClick={() => clearInputs()}
           >
             Reset
