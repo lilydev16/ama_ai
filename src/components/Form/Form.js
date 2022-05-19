@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './Form.css'
 
 const Form = ({ addPrompt }) => {
+  const [isEmpty, setEmpty] = useState(false)
   const [promptReq, setPromptReq] = useState(
     JSON.parse(localStorage.getItem('prompt-req')) ||
     {
@@ -42,12 +43,18 @@ const Form = ({ addPrompt }) => {
 
   const submitPrompt = (e) => {
     e.preventDefault()
-    addPrompt(promptReq)
-    clearInputs()
+    // if prompt is empty then dont add prompt, instead show an err msg to the user
+    if (promptReq.prompt.trim().length !==0) {
+      addPrompt(promptReq)
+      clearInputs()
+    } else {
+      setEmpty(true)
+    }
   }
 
   const clearInputs = () => {
     setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: 'text-curie-001' })
+    setEmpty(false)
   }
 
   useEffect(() => {
@@ -74,11 +81,13 @@ const Form = ({ addPrompt }) => {
               placeholder='How are you?'
               value={promptReq.prompt}
               onChange={(e) => updatePromptInput(e)}
-              />
+            />
+
           </div>
           <p className='mt-2 text-sm text-gray-500' id='prompt-text'>
             Ask a question.
           </p>
+          {isEmpty && <p>Please fill in the prompt</p>}
         </div>
 
         <div className='settings w-1/6'>
@@ -93,7 +102,6 @@ const Form = ({ addPrompt }) => {
               value={promptReq.engine}
               onChange={(e) => updateEngine(e)}
             >
-              {/* <option value=''>Choose an engine</option> */}
               <option value='text-curie-001'>curie</option>
               <option value='text-davinci-002'>davinci</option>
               <option value='text-babbage-001'>babbage</option>
