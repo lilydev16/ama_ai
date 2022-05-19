@@ -134,8 +134,8 @@ const Form = ({ addPrompt }) => {
           </div>
         </div>
         <div className='button-container'>
-          <button>Enter</button>
-          <button onClick={() => clearInputs()}>Reset</button>
+          <button type='submit'>Enter</button>
+          <button type='button' onClick={() => clearInputs()}>Reset</button>
         </div>
       </form>
     </div>
