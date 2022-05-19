@@ -81,8 +81,12 @@ const Form = ({ addPrompt }) => {
 
         <div className='settings'>
           <div>
+            <label htmlFor="engine" className="block text-sm font-medium text-gray-700">
+              Engine
+            </label>
             <select
-            className='engine'
+              className='engine mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              id='engine'
               name='engine'
               value={promptReq.engine}
               onChange={(e) => updateEngine(e)}
