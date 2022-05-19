@@ -6,7 +6,7 @@ const Form = ({ addPrompt }) => {
     JSON.parse(localStorage.getItem('prompt-req')) ||
     {
       prompt: '',
-      engine: '',
+      engine: 'text-curie-001',
       temperature: 0.5,
       tokens: 6
     }
@@ -47,7 +47,7 @@ const Form = ({ addPrompt }) => {
   }
 
   const clearInputs = () => {
-    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: '' })
+    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: 'text-curie-001' })
   }
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const Form = ({ addPrompt }) => {
               value={promptReq.engine}
               onChange={(e) => updateEngine(e)}
             >
-              <option value=''>Choose an engine</option>
+              {/* <option value=''>Choose an engine</option> */}
               <option value='text-curie-001'>curie</option>
               <option value='text-davinci-002'>davinci</option>
               <option value='text-babbage-001'>babbage</option>
