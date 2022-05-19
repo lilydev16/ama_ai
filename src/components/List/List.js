@@ -13,7 +13,7 @@ const List = ({ texts}) => {
   })
 
   return(
-    <div className="list">
+    <div className="list space-y-3">
       {promptCards}
     </div>
   )
