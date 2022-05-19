@@ -1,9 +1,18 @@
-.settings {
-  width: 28%;
+.prompt-container {
+  margin-top: 4%;
 }
 
-.temperature,
-.tokens,
-.engine {
-  width: 100%;
+.settings {
+  /* width: 18vw; */
+  /* border: 2px red solid; */
+  margin-top: 3%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  /* width: 18vw; */
 }
