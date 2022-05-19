@@ -1,8 +1,9 @@
-input {
-  width: 58%;
-  height: 22%;
+.settings {
+  width: 28%;
 }
 
-.form {
-  margin-top: 4%;
+.temperature,
+.tokens,
+.engine {
+  width: 100%;
 }
