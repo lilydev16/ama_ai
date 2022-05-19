@@ -16,7 +16,7 @@ Try changing the settings to see if the AI will generate different responses.
 - Asychronus JavaScript
 
 # Getting Started
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these simple steps:
 
 ## Installation
 
@@ -44,7 +44,7 @@ To get a local copy up and running follow these simple steps.
 Implementing React hooks and local storage was a huge win for me. It was important that I get the application working first with a few features (eg. adding presets and ability to change the engine, temperature, and max tokens). Then I chose to challenge myself by converting to React hooks and implementing local storage.
 On the feature branch `feature/local-storage`,  I converted the class components to functional components and implemented `useState` and `useEffect` to get more practice using hooks. 
 
-This was the first time I implemented local storage. I found this article, [Local Storage in React](https://www.robinwieruch.de/local-storage-react/) helpful. After implementing local storage to the form, I realized I needed to add an additonal button to reset the form.
+This was the first time I implemented local storage. I found this article, [Local Storage in React](https://www.robinwieruch.de/local-storage-react/), very helpful. After implementing local storage to the form, I realized I needed to add an additonal button to reset the form.
 
 Here's some other helpful articles:
 - [Using React useState with an object](https://blog.logrocket.com/using-react-usestate-object/)
@@ -63,6 +63,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - Favoriting messages between the user and AI
 - Example prompts that the user can easily copy and paste into the form to get started using the application.
 - Narrowing down an audience/niche and specific topics to ask the AI
+- Removing persisted messages from local storage
 - Styling:
     - Adding css animation to the AI response text
     - Clean design
@@ -70,8 +71,8 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 # Technologies Used
 - React
 - Javascript
-- HTML
-- CSS
+- HTML/CSS
+- Tailwind CSS
 - Lighthouse (Chrome Dev Tools)
 - React Dev Tools (Chrome Dev Tools)
 
@@ -86,4 +87,6 @@ Skip installation by using this deployment link to view the application: [Add De
 - [OpenAI](https://beta.openai.com/overview)
 - [Create React App](https://create-react-app.dev/)
 - [Favicon generator](https://favicon.io/favicon-generator/)
+- [Tailwind UI](https://tailwindui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Heroku](https://www.heroku.com/)
