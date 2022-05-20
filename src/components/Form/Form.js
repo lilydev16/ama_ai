@@ -72,7 +72,7 @@ const Form = ({ addPrompt }) => {
           </label>    
           <div className='mt-1 rounded-md shadow-sm'>
             <input
-              className='prompt-input block w-full pr-10 border border-gray-300 text-indigo-900 placeholder-indigo-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md'
+              className='prompt-input block w-full pr-10 border border-indigo-300 text-indigo-900 placeholder-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md'
               aria-describedby='prompt'
               type='text'
               id='prompt'
@@ -92,7 +92,7 @@ const Form = ({ addPrompt }) => {
               Engine
             </label>
             <select
-              className='engine mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              className='engine mt-1 block w-full pl-3 pr-10 py-2 text-base border border-indigo-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
               id='engine'
               name='engine'
               value={promptReq.engine}
@@ -115,7 +115,7 @@ const Form = ({ addPrompt }) => {
               </div>
               <div className='mt-1'>
                 <input
-                  className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md'
+                  className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-indigo-300 rounded-md'
                   type='number'
                   max='1'
                   min='0'
@@ -136,7 +136,7 @@ const Form = ({ addPrompt }) => {
               </div>
               <div className='mt-1'>
                 <input
-                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md'
+                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-indigo-300 rounded-md'
                   type='number'
                   max='140'
                   min='1'
