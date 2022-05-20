@@ -72,7 +72,7 @@ const Form = ({ addPrompt }) => {
           </label>    
           <div className='mt-1 rounded-md shadow-sm'>
             <input
-              className='prompt-input block w-full pr-10 border border-indigo-300 text-indigo-900 placeholder-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md'
+              className='prompt-input block w-full pr-10 border border-indigo-300 text-indigo-900 placeholder-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md px-3 py-2'
               aria-describedby='prompt'
               type='text'
               id='prompt'
