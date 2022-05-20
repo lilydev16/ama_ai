@@ -68,7 +68,6 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - Removing persisted messages from local storage
 - Styling:
     - Adding css animation to the AI response text
-    - Clean design
 
 # Technologies Used
 - React
