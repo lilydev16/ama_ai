@@ -86,13 +86,13 @@ const Form = ({ addPrompt }) => {
           {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
         </div>
 
-        <div className='settings'>
-          <div className='engine-container'>
+        <div className='settings w-full'>
+          <div className='engine-container mt-3'>
             <label htmlFor='engine' className='block text-sm font-medium text-gray-700'>
               Engine
             </label>
             <select
-              className='engine mt-1 block w-full pl-3 pr-10 py-2 text-base border border-indigo-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'
+              className='engine mt-1 block w-full px-3 pr-10 py-2 text-base border border-indigo-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 rounded-md'
               id='engine'
               name='engine'
               value={promptReq.engine}
