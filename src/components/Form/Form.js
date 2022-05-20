@@ -61,12 +61,12 @@ const Form = ({ addPrompt }) => {
   }, [promptReq])
 
   return(
-    <div className='form flex justify-center'>
+    <div className='form mt-9 flex justify-center'>
       <form 
         onSubmit={submitPrompt} 
         className='shadow-xl p-5 rounded-md w-3/4'
       >
-        <div className='prompt-container'>
+        <div className='prompt-container mt-4'>
           <label htmlFor='prompt' className='block text-sm font-medium text-gray-700'>
             Ask me a question
           </label>    
