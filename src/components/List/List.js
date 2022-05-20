@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../Card/Card";
-import './List.css';
 
 const List = ({ texts}) => {
   const promptCards = texts.map((text, index) => {

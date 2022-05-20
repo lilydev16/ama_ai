@@ -1,4 +1,3 @@
-import './App.css';
 import { useState, useEffect } from 'react';
 import Form from './components/Form/Form';
 import List from './components/List/List';

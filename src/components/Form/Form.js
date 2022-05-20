@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './Form.css'
 
 const Form = ({ addPrompt }) => {
   const [isEmpty, setEmpty] = useState(false)
