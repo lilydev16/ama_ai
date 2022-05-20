@@ -24,13 +24,13 @@ const App = () => {
   }, [texts])
 
   return (
-    <div className="app">
+    <div className='app'>
       {error ? <p className='error'>{error}</p> :
-      <>
-        <Form addPrompt={addPrompt} />
-        <List texts={texts} />
-        <Footer />
-      </>
+        <>
+          <Form addPrompt={addPrompt} />
+          <List texts={texts} />
+          <Footer />
+        </>
       }
     </div>
   )
