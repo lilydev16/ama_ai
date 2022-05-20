@@ -56,20 +56,25 @@ Here's some other helpful articles:
 
 # Features
 
-The user can enter a prompt to ask the AI a question like "What's today's date?". When the AI responds, the messages between the user and AI are displayed in a list from newest to oldest. The messages and input values persist on the page even when the page reloads due to local storage.
+### List messages from newest to oldest
+The user can enter a prompt to ask the AI a question like "What's today's date?". When the AI responds, the messages between the user and AI are displayed in a list from newest to oldest. 
 
+### Local Storage
+The messages and input values persist on the page even when the page reloads due to local storage.
+
+### Presets & ability to change settings
 The form allows the user to play around with the settings for the engine, temperature, and max tokens. 
+
 If a user doesn't want to change the settings, then the default engine is `Curie` and the request body will send these presets to the API:
 - temperature: 0.5
 - max tokens: 6
 
 # Future Additions
 - Favoriting messages between the user and AI
-- Example prompts that the user can easily copy and paste into the form to get started using the application.
+- Example prompts that the user can easily copy and paste into the form to get started using the application
 - Narrowing down an audience/niche and specific topics to ask the AI
 - Removing persisted messages from local storage
-- Styling:
-    - Adding css animation to the AI response text
+- Adding css animation to the AI response text
 
 # Technologies Used
 - React
