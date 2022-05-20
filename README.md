@@ -48,7 +48,7 @@ I wanted to get more practice with React hooks. Implementing local storage with 
 
 This was the first time I implemented local storage. I found this article, [Local Storage in React](https://www.robinwieruch.de/local-storage-react/), very helpful. After implementing local storage to the form, I realized I needed to add an additonal button to reset the form to create a better user experience.
 
-Another thing I want to improve on as a front end developer is design. I believe I accomplished a clean design using Tailwind CSS and plan to use Tailwind in future projects.
+Another thing I want to improve on as a front end developer is design. I was able to accomplish a clean and responsve design using Tailwind CSS and plan to use Tailwind in future projects.
 
 Here's some other helpful articles:
 - [Using React useState with an object](https://blog.logrocket.com/using-react-usestate-object/)
