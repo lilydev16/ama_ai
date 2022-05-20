@@ -82,7 +82,11 @@ Skip installation by using this deployment link to view the application: [Fun wi
 - The application was deployed using [Heroku](https://www.heroku.com/).
 
 # Contributors
-- [Lauralyn Watson](https://github.com/lswatson16)
+
+Lauralyn Watson
+- [GitHub](https://github.com/lswatson16)
+- [LinkedIn](https://www.linkedin.com/in/lauralyn-watson/)
+- [Portfolio](https://terminal.turing.edu/profiles/1340)
 
 # Credits
 - [OpenAI](https://beta.openai.com/overview)
