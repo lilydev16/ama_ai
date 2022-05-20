@@ -86,7 +86,7 @@ const Form = ({ addPrompt }) => {
           {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
         </div>
 
-        <div className='settings w-1/6'>
+        <div className='settings'>
           <div className='engine-container'>
             <label htmlFor='engine' className='block text-sm font-medium text-gray-700'>
               Engine
