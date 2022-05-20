@@ -127,7 +127,7 @@ const Form = ({ addPrompt }) => {
                 />
               </div>
             </div>
-            <div className='token-container'>
+            <div className='token-container mt-3'>
               <div className='flex justify-between'>
                 <label className='block text-sm font-medium text-gray-700'>
                   Max Tokens
@@ -136,7 +136,7 @@ const Form = ({ addPrompt }) => {
               </div>
               <div className='mt-1'>
                 <input
-                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-indigo-300 rounded-md'
+                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-indigo-300 rounded-md px-3 py-2'
                   type='number'
                   max='140'
                   min='1'
