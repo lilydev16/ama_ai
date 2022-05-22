@@ -26,18 +26,14 @@ const Form = ({ addPrompt }) => {
   }
 
   const updateTemperature = (e) => {
-    let { value, min, max } = e.target;
-    value = Math.max(Number(min), Math.min(Number(max), Number(value)))
     setPromptReq(promptReq => ({
-      ...promptReq, temperature: value
+      ...promptReq, temperature: e.target.value
     }))
   }
 
   const updateTokens = (e) => {
-    let { value: tokenValue, min, max } = e.target
-    tokenValue = Math.max(Number(min), Math.min(Number(max), Number(tokenValue)))
     setPromptReq(promptReq => ({
-      ...promptReq, tokens: tokenValue
+      ...promptReq, tokens: e.target.value
     }))
   }
 
@@ -81,8 +77,7 @@ const Form = ({ addPrompt }) => {
               value={promptReq.prompt}
               onChange={(e) => updatePromptInput(e)}
             />
-          </div>
-          
+          </div>        
           {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
         </div>
 
@@ -114,15 +109,16 @@ const Form = ({ addPrompt }) => {
                 <span className='text-sm text-gray-500' id='temperature'>Optional</span>
               </div>
               <div className='mt-1'>
-                <input
-                  className='temperature shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-indigo-300 rounded-md px-3 py-2'
-                  type='number'
-                  max='1'
-                  min='0'
-                  step="0.01"
-                  name='temperature'
-                  placeholder='0.5'
+                <Slider
+                  aria-label="Temperature"
                   value={promptReq.temperature}
+                  getAriaValueText={() => `Temperature: ${promptReq.temperature}`}
+                  marks
+                  name="temperature"
+                  min={0}
+                  max={1}
+                  step={0.01}
+                  valueLabelDisplay="on"
                   onChange={(e) => updateTemperature(e)}
                 />
               </div>
@@ -135,18 +131,19 @@ const Form = ({ addPrompt }) => {
                 <span className='text-sm text-gray-500' id='tokens'>Optional</span>
               </div>
               <div className='mt-1'>
-                <input
-                  className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-indigo-300 rounded-md px-3 py-2'
-                  type='number'
-                  max='200'
-                  min='1'
-                  name='tokens'
-                  placeholder='60'
+                <Slider
+                  aria-label="Token Count"
                   value={promptReq.tokens}
+                  getAriaValueText={() => `Token Count: ${promptReq.tokens}`}
+                  step={10}
+                  marks
+                  name="tokens"
+                  min={10}
+                  max={140}
+                  valueLabelDisplay="on"
                   onChange={(e) => updateTokens(e)}
-                />  
+                />
               </div>
-
             </div>
           </div>    
         </div>
