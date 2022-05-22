@@ -9,7 +9,7 @@ const Form = ({ addPrompt }) => {
       prompt: '',
       engine: 'text-curie-001',
       temperature: 0.5,
-      tokens: 6
+      tokens: 60
     }
   )
 
@@ -52,7 +52,7 @@ const Form = ({ addPrompt }) => {
   }
 
   const clearInputs = () => {
-    setPromptReq({ prompt: '', temperature: 0.5, tokens: 6, engine: 'text-curie-001' })
+    setPromptReq({ prompt: '', temperature: 0.5, tokens: 60, engine: 'text-curie-001' })
     setEmpty(false)
   }
 
@@ -77,7 +77,7 @@ const Form = ({ addPrompt }) => {
               type='text'
               id='prompt'
               name='prompt'
-              placeholder='How are you?'
+              placeholder='Who is Malcom X?'
               value={promptReq.prompt}
               onChange={(e) => updatePromptInput(e)}
             />
@@ -121,7 +121,7 @@ const Form = ({ addPrompt }) => {
                   min='0'
                   step="0.01"
                   name='temperature'
-                  placeholder='0.4'
+                  placeholder='0.5'
                   value={promptReq.temperature}
                   onChange={(e) => updateTemperature(e)}
                 />
@@ -138,10 +138,10 @@ const Form = ({ addPrompt }) => {
                 <input
                   className='tokens shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border border-indigo-300 rounded-md px-3 py-2'
                   type='number'
-                  max='140'
+                  max='200'
                   min='1'
                   name='tokens'
-                  placeholder='64'
+                  placeholder='60'
                   value={promptReq.tokens}
                   onChange={(e) => updateTokens(e)}
                 />  
