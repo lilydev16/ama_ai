@@ -50,7 +50,7 @@ const Form = ({ addPrompt }) => {
           </label>    
           <div className='mt-1 rounded-md shadow-sm'>
             <input
-              className='prompt-input block w-full pr-10 border border-indigo-300 text-indigo-900 placeholder-gray-300 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm rounded-md px-3 py-2'
+              className='prompt-input block w-full pr-10 border border-indigo-300 text-indigo-900 placeholder-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md px-3 py-2'
               aria-describedby='prompt'
               type='text'
               id='prompt'
@@ -60,7 +60,7 @@ const Form = ({ addPrompt }) => {
               onChange={(e) => updatePromptReq(e)}
             />
           </div>        
-          {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
+          {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>* Please fill in the prompt</p>}
         </div>
 
         <div className='settings w-full'>
