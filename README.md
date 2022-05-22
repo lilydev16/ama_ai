@@ -57,7 +57,7 @@ Here's some other helpful articles:
 # Features
 
 ### List messages from newest to oldest
-The user can enter a prompt to ask the AI a question like "What's today's date?". When the AI responds, the messages between the user and AI are displayed in a list from newest to oldest. 
+The user can enter a prompt to ask the AI a question like "Who is Malcom X?". When the AI responds, the messages between the user and AI are displayed in a list from newest to oldest. 
 
 ### Local Storage
 The messages and input values persist on the page even when the page reloads due to local storage.
@@ -67,7 +67,7 @@ The form allows the user to play around with the settings for the engine, temper
 
 If a user doesn't want to change the settings, then the default engine is `Curie` and the request body will send these presets to the API:
 - temperature: 0.5
-- max tokens: 6
+- max tokens: 60
 
 ![List](https://media.giphy.com/media/4k2Qlw110mrTZvwD68/giphy.gif)
 
@@ -75,7 +75,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 # Future Additions
 - Favoriting messages between the user and AI
 - Example prompts that the user can easily copy and paste into the form to get started using the application
-- Narrowing down an audience/niche and specific topics to ask the AI
+- Narrowing down an audience/niche and specific topics to ask the AI (eg. Black History Month)
 - Removing persisted messages from local storage
 - Adding css animation to the AI response text
 
