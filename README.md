@@ -104,4 +104,5 @@ Lauralyn Watson
 - [Favicon generator](https://favicon.io/favicon-generator/)
 - [Tailwind UI](https://tailwindui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Material UI Slider API](https://mui.com/material-ui/api/slider/)
 - [Heroku](https://www.heroku.com/)
