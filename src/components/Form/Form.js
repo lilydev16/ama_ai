@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Slider from '@mui/material/Slider';
 
 const Form = ({ addPrompt }) => {
   const [isEmpty, setEmpty] = useState(false)
@@ -105,7 +106,7 @@ const Form = ({ addPrompt }) => {
           </div>
 
           <div className='presets'>
-            <div className='temperature-container'>
+            <div className='temperature-container mt-3'>
               <div className='flex justify-between'>
                 <label className='block text-sm font-medium text-gray-700'>
                   Temperature
