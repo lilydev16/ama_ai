@@ -2,12 +2,12 @@
 
 ## Overview
 
-Here's a chance to play around with AI technology. Try asking the [OpenAI](https://beta.openai.com/overview) a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
+This React application utilizes an API that allows the user to play around with Artificial Intelligence (AI) technology called [OpenAI](https://beta.openai.com/overview). Try asking the OpenAI a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
 
 Read more about what cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
 
-Here's the React application I built using the OpenAI API: [Fun with AI](https://shopify-fun-ai.herokuapp.com/)
+Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://shopify-fun-ai.herokuapp.com/)
 
 # Learning Goals
 - React fundamentals
@@ -75,7 +75,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 # Future Additions
 - Favoriting messages between the user and AI
 - Example prompts that the user can easily copy and paste into the form to get started using the application
-- Narrowing down an audience/niche and specific topics to ask the AI (eg. Black History Month)
+- Narrowing down an audience/niche and specific topics to ask the AI (eg. Black history in America)
 - Removing persisted messages from local storage
 - Adding css animation to the AI response text
 
