@@ -77,7 +77,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - Example prompts that the user can easily copy and paste into the form to get started using the application
 - Narrowing down an audience/niche and specific topics to ask the AI (eg. Black history in America)
 - Removing persisted messages from local storage
-- Adding css animation to the AI response text
+- Adding CSS animation to the AI response text
 
 # Technologies Used
 - React
