@@ -69,9 +69,9 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - temperature: 0.5
 - max tokens: 60
 
-![List](https://media.giphy.com/media/4k2Qlw110mrTZvwD68/giphy.gif)
+![List](https://media.giphy.com/media/qHCkzkp4JlDsLLJIMe/giphy.gif)
 
-![Responsive Design](https://media.giphy.com/media/rFpYa4G6oRSj0OANoM/giphy.gif)
+![Responsive Design](https://media.giphy.com/media/bODEUeKWNFyNB75Osk/giphy.gif)
 # Future Additions
 - Favoriting messages between the user and AI
 - Example prompts that the user can easily copy and paste into the form to get started using the application
