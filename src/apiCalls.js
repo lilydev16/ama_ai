@@ -12,7 +12,6 @@ const apiCalls = {
       stream: false,
     }
     
-    console.log(newPrompt)
     return fetch(`https://api.openai.com/v1/engines/${newPrompt.engine}/completions`, {
       method: "POST",
       headers: {
