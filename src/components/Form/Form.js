@@ -13,27 +13,9 @@ const Form = ({ addPrompt }) => {
     }
   )
 
-  const updatePromptInput = (e) => {
+  const updatePromptReq = (e) => {
     setPromptReq(promptReq => ({
-      ...promptReq, prompt: e.target.value
-    }))
-  }
-  
-  const updateEngine = (e) => {
-    setPromptReq(promptReq => ({
-      ...promptReq, engine: e.target.value
-    }))
-  }
-
-  const updateTemperature = (e) => {
-    setPromptReq(promptReq => ({
-      ...promptReq, temperature: e.target.value
-    }))
-  }
-
-  const updateTokens = (e) => {
-    setPromptReq(promptReq => ({
-      ...promptReq, tokens: e.target.value
+      ...promptReq, [e.target.name]: e.target.value
     }))
   }
 
@@ -75,7 +57,7 @@ const Form = ({ addPrompt }) => {
               name='prompt'
               placeholder='Who is Malcom X?'
               value={promptReq.prompt}
-              onChange={(e) => updatePromptInput(e)}
+              onChange={(e) => updatePromptReq(e)}
             />
           </div>        
           {isEmpty && <p className='mt-2 text-sm text-red-600' id='prompt-error'>Please fill in the prompt</p>}
@@ -91,7 +73,7 @@ const Form = ({ addPrompt }) => {
               id='engine'
               name='engine'
               value={promptReq.engine}
-              onChange={(e) => updateEngine(e)}
+              onChange={(e) => updatePromptReq(e)}
             >
               <option value='text-curie-001'>curie</option>
               <option value='text-davinci-002'>davinci</option>
@@ -119,7 +101,7 @@ const Form = ({ addPrompt }) => {
                   max={1}
                   step={0.01}
                   valueLabelDisplay="on"
-                  onChange={(e) => updateTemperature(e)}
+                  onChange={(e) => updatePromptReq(e)}
                 />
               </div>
             </div>
@@ -141,7 +123,7 @@ const Form = ({ addPrompt }) => {
                   min={10}
                   max={140}
                   valueLabelDisplay="on"
-                  onChange={(e) => updateTokens(e)}
+                  onChange={(e) => updatePromptReq(e)}
                 />
               </div>
             </div>
