@@ -3,6 +3,7 @@ import Form from './components/Form/Form';
 import List from './components/List/List';
 import apiCalls from './apiCalls';
 import Footer from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
 
 const App = () => {
   const [error, setError] = useState('')
@@ -24,9 +25,10 @@ const App = () => {
   }, [texts])
 
   return (
-    <div className='app'>
+    <div className='flex flex-col'>
       {error ? <p className='error'>{error}</p> :
         <>
+          <Header />
           <Form addPrompt={addPrompt} />
           <List texts={texts} />
           <Footer />
