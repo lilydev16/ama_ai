@@ -7,7 +7,7 @@ This React application utilizes an API that allows the user to interact with an 
 Read more about what cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
 
-Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://shopify-fun-ai.herokuapp.com/).
+Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://fun-with-ai-rho.vercel.app/).
 
 # Learning Goals
 - React fundamentals
@@ -88,7 +88,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - React Dev Tools (Chrome Dev Tools)
 
 # Deployment
-This application is hosted on Heroku. Please use this deploy link to skip installation and view the application: [Fun with AI](https://shopify-fun-ai.herokuapp.com/).
+This application is hosted on Vercel. Please use this deploy link to skip installation and view the application: [Fun with AI](https://fun-with-ai-rho.vercel.app/).
 
 # Contributors
 
@@ -100,8 +100,8 @@ Lauralyn Watson
 # Credits
 - [OpenAI](https://beta.openai.com/overview)
 - [Create React App](https://create-react-app.dev/)
+- [Vercel](https://www.vercel.com/)
 - [Favicon generator](https://favicon.io/favicon-generator/)
 - [Tailwind UI](https://tailwindui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Material UI Slider API](https://mui.com/material-ui/api/slider/)
-- [Heroku](https://www.heroku.com/)
