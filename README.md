@@ -7,7 +7,7 @@ This React application utilizes an API that allows the user to play around with 
 Read more about what cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
 
-Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://shopify-fun-ai.herokuapp.com/)
+Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://shopify-fun-ai.herokuapp.com/).
 
 # Learning Goals
 - React fundamentals
@@ -88,15 +88,14 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - React Dev Tools (Chrome Dev Tools)
 
 # Deployment
-Skip installation by using this deployment link to view the application: [Fun with AI](https://shopify-fun-ai.herokuapp.com/)
-- The application was deployed using [Heroku](https://www.heroku.com/).
+This application is hosted on Heroku. Please use this deploy link to skip installation and view the application: [Fun with AI](https://shopify-fun-ai.herokuapp.com/).
 
 # Contributors
 
 Lauralyn Watson
 - [GitHub](https://github.com/lswatson16)
 - [LinkedIn](https://www.linkedin.com/in/lauralyn-watson/)
-- [Portfolio](https://terminal.turing.edu/profiles/1340)
+- [Turing Alumni Portfolio](https://terminal.turing.edu/profiles/1340)
 
 # Credits
 - [OpenAI](https://beta.openai.com/overview)
