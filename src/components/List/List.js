@@ -12,7 +12,7 @@ const List = ({ texts}) => {
   })
 
   return(
-    <div className='list space-y-3 mt-16'>
+    <div className='list space-y-3 mt-16 px-16'>
       {promptCards}
     </div>
   )
