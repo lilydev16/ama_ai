@@ -2,9 +2,9 @@
 
 ## Overview
 
-This React application utilizes an API that allows the user to interact with an Artificial Intelligence (AI) technology called [OpenAI](https://beta.openai.com/overview). Try asking the OpenAI a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
+[Fun with AI](https://fun-with-ai-rho.vercel.app/) is a React application that allows the user to interact with an Artificial Intelligence (AI) technology called [OpenAI](https://beta.openai.com/overview). Try asking the OpenAI a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
 
-Read more about what cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
+Read more about the cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
 
 Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://fun-with-ai-rho.vercel.app/).
@@ -16,6 +16,7 @@ Here's a link to the React application I built using the OpenAI API: [Fun with A
 - Network request
 - API
 - Asychronous JavaScript
+- CSS Flexbox
 - Tailwind CSS
 
 # Getting Started
