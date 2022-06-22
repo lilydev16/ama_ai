@@ -25,7 +25,7 @@ const App = () => {
   }, [texts])
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col h-screen'>
       {error ? <p className='error'>{error}</p> :
         <>
           <Header />
