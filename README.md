@@ -1,13 +1,13 @@
-# Fun with AI
+# AMA AI
 
 ## Overview
 
-[Fun with AI](https://fun-with-ai-rho.vercel.app/) is a React application that allows the user to interact with an Artificial Intelligence (AI) technology called [OpenAI](https://beta.openai.com/overview). Try asking the OpenAI a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
+[AMA AI](https://fun-with-ai-rho.vercel.app/) is a React application that allows the user to interact with an Artificial Intelligence (AI) technology called [OpenAI](https://beta.openai.com/overview). Try asking the OpenAI a question and see what response you get back. After inputing some text as a prompt, the AI will generate a text completion that attempts to match whatever context or pattern given. If you give the AI a prompt like “Write a tagline for an ice cream shop”, it will return a completion such as “We serve up smiles with every scoop!”. Try changing the settings to see if the AI will generate different responses.
 
 Read more about the cool features this AI technology has in the [docs](https://beta.openai.com/docs/guides/completion/introduction).
 
 
-Here's a link to the React application I built using the OpenAI API: [Fun with AI](https://fun-with-ai-rho.vercel.app/).
+Here's a link to the React application I built using the OpenAI API: [AMA AI](https://fun-with-ai-rho.vercel.app/).
 
 # Learning Goals
 - React fundamentals
@@ -89,7 +89,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 - React Dev Tools (Chrome Dev Tools)
 
 # Deployment
-This application is hosted on Vercel. Please use this deploy link to skip installation and view the application: [Fun with AI](https://fun-with-ai-rho.vercel.app/).
+This application is hosted on Vercel. Please use this deploy link to skip installation and view the application: [AMA AI](https://fun-with-ai-rho.vercel.app/).
 
 # Contributors
 
