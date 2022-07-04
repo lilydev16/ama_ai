@@ -2,7 +2,7 @@ import React from "react";
 const navigation = [
   {
     name: 'GitHub',
-    href: 'https://github.com/lswatson16',
+    href: 'https://github.com/lswatson16/fun_with_ai',
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
