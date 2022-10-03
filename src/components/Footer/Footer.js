@@ -1,8 +1,8 @@
 import React from "react";
 const navigation = [
   {
-    name: 'GitHub',
-    href: 'https://github.com/lswatson16/fun_with_ai',
+    name: "GitHub",
+    href: "https://github.com/lilydev16/ama_ai",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
@@ -12,29 +12,35 @@ const navigation = [
         />
       </svg>
     ),
-  }
-]
+  },
+];
 
 const Footer = () => {
-  return(
-    <div className='pt-7 flex flex-none h-48'>
-      <footer className='bg-white w-full'>
-        <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8'>
-          <div className='flex justify-center space-x-6 md:order-2'>
+  return (
+    <div className="pt-7 flex flex-none h-48">
+      <footer className="bg-white w-full">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+          <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className='text-gray-500 hover:text-gray-700'>
-                <span className='sr-only'>{item.name}</span>
-                <item.icon className='h-6 w-6' aria-hidden='true' />
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-6 w-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-          <div className='mt-8 md:mt-0 md:order-1'>
-            <p className='text-center text-base text-gray-500'>&copy; 2021 Created by Lauralyn Watson</p>
+          <div className="mt-8 md:mt-0 md:order-1">
+            <p className="text-center text-base text-gray-500">
+              &copy; 2021 Created by Lauralyn Watson
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default Footer;
