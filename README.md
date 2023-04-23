@@ -100,7 +100,7 @@ If a user doesn't want to change the settings, then the default engine is `Curie
 
 # Deployment
 
-This application is hosted on Vercel. Please use this deploy link to skip installation and view the application: [AMA AI](https://fun-with-ai-rho.vercel.app/).
+This application is hosted on [Vercel](https://www.vercel.com/). Please use this deploy link to skip installation and view the application: [AMA AI](https://fun-with-ai-rho.vercel.app/).
 
 # Contributors
 
